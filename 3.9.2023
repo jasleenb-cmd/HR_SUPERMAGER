@@ -15,7 +15,21 @@ def login():
         login_window.destroy()
         hr_app_window = tk.Tk()
         hr_app_window.title("HR App")
+
+        # Create the dashboard with buttons for schedule, payroll, and training
+        schedule_button = tk.Button(hr_app_window, text="Schedule")
+        schedule_button.pack(padx=10, pady=10)
+
+        payroll_button = tk.Button(hr_app_window, text="Payroll")
+        payroll_button.pack(padx=10, pady=10)
+
+        training_button = tk.Button(hr_app_window, text="Training")
+        training_button.pack(padx=10, pady=10)
+
         # Add widgets to the HR app window here
+
+        # Run the HR app window
+        hr_app_window.mainloop()
     else:
         # If the credentials are incorrect, show an error message
         error_label.config(text="Invalid username or password")
@@ -23,40 +37,22 @@ def login():
 
 def create_user():
     # Get the new username and password
-    username = new_username_entry.get()
-    password = new_password_entry.get()
+    username = username_entry.get()
+    password = password_entry.get()
 
-    # Add the new user to the users dictionary
-    users[username] = password
+    if username in users:
+        # If the username already exists, show an error message
+        error_label.config(text="Username already exists")
+    else:
+        # Add the new user to the users dictionary
+        users[username] = password
 
-    # Clear the entry fields
-    new_username_entry.delete(0, tk.END)
-    new_password_entry.delete(0, tk.END)
+        # Clear the entry fields
+        username_entry.delete(0, tk.END)
+        password_entry.delete(0, tk.END)
 
-
-def show_create_user_window():
-    # Create a new window for creating a user
-    create_user_window = tk.Toplevel(login_window)
-    create_user_window.title("Create User")
-
-    # Add widgets to the create user window
-    new_username_label = tk.Label(create_user_window, text="Username:")
-    new_username_label.grid(row=0, column=0, padx=5, pady=5)
-
-    global new_username_entry
-    new_username_entry = tk.Entry(create_user_window)
-    new_username_entry.grid(row=0, column=1, padx=5, pady=5)
-
-    new_password_label = tk.Label(create_user_window, text="Password:")
-    new_password_label.grid(row=1, column=0, padx=5, pady=5)
-
-    global new_password_entry
-    new_password_entry = tk.Entry(create_user_window, show="*")
-    new_password_entry.grid(row=1, column=1, padx=5, pady=5)
-
-    create_user_button = tk.Button(create_user_window, text="Create User",
-                                   command=create_user)
-    create_user_button.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
+        # Show a success message
+        error_label.config(text="User created successfully")
 
 
 # Create the login window
@@ -80,7 +76,7 @@ login_button = tk.Button(login_window, text="Login", command=login)
 login_button.grid(row=2, column=0, padx=5, pady=5)
 
 create_user_button = tk.Button(login_window, text="Create User",
-                               command=show_create_user_window)
+                               command=create_user)
 create_user_button.grid(row=2, column=1, padx=5, pady=5)
 
 error_label = tk.Label(login_window, text="")
@@ -91,3 +87,4 @@ users = {"admin": "password"}
 
 # Run the login window
 login_window.mainloop()
+

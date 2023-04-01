@@ -52,7 +52,7 @@ def create_dashboard():
 
     # Scheduling tab
     scheduling_frame = ttk.Frame(notebook)
-    notebook.add(scheduling_frame, text="Scheduling")
+    notebook.add(scheduling_frame, text="Memo")
 
     ttk.Label(scheduling_frame, text="Event Name:").grid(row=0, column=0,
                                                          sticky="e")
@@ -78,6 +78,11 @@ def create_dashboard():
     event_list = tk.Listbox(scheduling_frame, height=10, width=50)
     event_list.grid(row=4, column=0, columnspan=2)
     update_event_list()
+
+    # Schedule tab
+    training_frame = ttk.Frame(notebook)
+    notebook.add(training_frame, text="Schedule")
+    ttk.Label(training_frame, text="Schedule Content").grid(row=0, column=0)
 
     # Payroll tab
     payroll_frame = ttk.Frame(notebook)

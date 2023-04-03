@@ -199,7 +199,7 @@ def create_dashboard():
     entry_event_date = tk.Entry(scheduling_frame)
     entry_event_date.grid(row=1, column=1)
 
-    ttk.Label(scheduling_frame, text="Event Time (HH:MM):").grid(row=2,
+    ttk.Label(scheduling_frame, text="Employee ID").grid(row=2,
                                                                  column=0,
                                                                  sticky="e")
     entry_event_time = tk.Entry(scheduling_frame)

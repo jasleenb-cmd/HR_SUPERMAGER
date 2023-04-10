@@ -1,0 +1,16 @@
+There are four main parts to the program, login, payroll, training, and schedule.
+
+LOGIN
+In order to login you will need to use a preset username and password.
+            Username: hr_manager
+            Password: utmcct211
+
+Once logged in you will be able to access the other parts of the program. The first
+page of the program is the payroll page. This page will allow you to view the current
+payroll, add a new employee, or edit an existing employee. The second page is the
+training page. This page will allow you to view the current training, add a new
+training, or edit an existing training. The third page is the schedule page. This page
+will allow you to view the current schedule, add a new schedule, or edit an existing
+schedule. In order to schedule an employee they must be added to the payroll. To log
+out of the program simply click the x button on the top of the window.
+

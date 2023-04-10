@@ -1,0 +1,27 @@
+This code creates a simple HR (Human Resources) application with a login system and a dashboard containing three tabs: Payroll, Training, and Schedule. The application reads and writes employee, event, and schedule data from CSV files. Here is a detailed documentation of the code:
+1. Import necessary libraries:
+   * tkinter for creating the GUI.
+   * csv for reading and writing data from/to CSV files.
+   * os to check if the CSV files exist.
+2. Define global variables for file names and data storage:
+   * employee_data_file, event_data_file, and schedule_data_file store the names of the CSV files.
+   * employee_data, scheduled_events, employee_schedules, and employee_code store the respective data.
+3. Define functions to read and write data from/to CSV files:
+   * read_employee_data(), read_schedule_data(), and read_event_data() read data from the respective CSV files and store them in the appropriate global variables.
+   * write_employee_data(), write_schedule_data(), and write_event_data() write data from the respective global variables to the corresponding CSV files.
+4. Define the add_employee() function to add a new employee to the employee_data list and update the employee list in the GUI.
+5. Define the delete_employee() function to remove an employee from the employee_data list and update the employee list in the GUI.
+6. Define the update_employee_list() function to update the employee list in the Payroll tab of the GUI.
+7. Define the update_employee_id_combobox() function to update the employee ID combobox in the Schedule tab of the GUI.
+8. Define the login() function to validate the user's login credentials and open the dashboard upon successful login.
+9. Define the add_schedule() function to add a schedule for an employee.
+10. Define the add_event() function to add an event to the scheduled_events list and update the event list in the GUI.
+11. Define the update_event_list() function to update the event list in the Training tab of the GUI.
+12. Define the delete_event() function to remove an event from the scheduled_events list and update the event list in the GUI.
+13. Define the on_tab_changed() function to handle the event when a different tab is selected in the dashboard.
+14. Define the update_schedule() function to update an employee's schedule and update the schedule tree in the Schedule tab of the GUI.
+15. Define the update_schedule_tree() function to update the schedule tree in the Schedule tab of the GUI.
+16. Define the create_dashboard() function to create the main HR dashboard window with three tabs (Payroll, Training, Schedule) and their respective widgets.
+17. Create the main login window, set the window title, and create labels, entry fields, and the login button.
+18. Start the main event loop to run the application.
+The code creates a simple HR application that allows users to add, delete, and manage employees, events, and schedules. The data is stored in CSV files for persistence.

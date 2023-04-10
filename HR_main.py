@@ -67,7 +67,7 @@ def add_employee():
             entry_employee_id.delete(0, 'end')
             entry_employee_name.delete(0, 'end')
             entry_employee_salary.delete(0, 'end')
-            update_employee_id_combobox()  # Add this line
+            update_employee_id_combobox() 
 
         else:
             messagebox.showwarning("Invalid ID",
@@ -221,7 +221,6 @@ def on_tab_changed(event):
     selected_tab = event.widget.tab(event.widget.select(), "text")
     if selected_tab == "Schedule":
         update_employee_id_combobox()
-        # update_schedule_tree()  # Add this line
 
 
 def update_schedule(employee_id, day_vars):
@@ -243,7 +242,7 @@ def update_schedule(employee_id, day_vars):
 
         write_schedule_data()
         messagebox.showinfo("Success", "Schedule updated successfully.")
-        update_schedule_tree()  # Add this line here
+        update_schedule_tree()  
     else:
         messagebox.showwarning("Missing Information",
                                "Please select an employee.")

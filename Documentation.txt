@@ -1,5 +1,9 @@
-This code creates a simple HR (Human Resources) application with a login system and a dashboard containing three tabs: Payroll, Training, and Schedule. The application reads and writes employee, event, and schedule data from CSV files. Here is a detailed documentation of the code:
-1. Import necessary libraries:
+This code creates a simple HR (Human Resources) application with a login system
+and a dashboard containing three tabs: Payroll, Training, and Schedule.
+The application reads and writes employee, event, and schedule data from CSV files.
+Here is a detailed documentation of the code:
+
+1. Import libraries:
    * tkinter for creating the GUI.
    * csv for reading and writing data from/to CSV files.
    * os to check if the CSV files exist.
